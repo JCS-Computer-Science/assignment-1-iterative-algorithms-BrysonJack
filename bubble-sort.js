@@ -9,36 +9,21 @@ function bubbleSort(array) {
     ** cycle without needing any swaps
     */
 
-    
-        let BubLength  = array.length;
-        for (let i = 0; i < BubLength; i++) {
-            for (let x = 0; x < BubLength; x++) {
-                if (array[x] < array[x + 1]) {
-                    let Store = array[x]
-                    array[x] = array[x + 1]
-                    array[x + 1] = Store
-                }
+    let BubSort = array
+    let BubLength  = array.length;
+    for (let i = 0; i < BubLength; i++) {
+        for (let j = 0; j < BubLength; j++) {
+            if (BubSort[j] > BubSort[j + 1]) {
+                let Store = BubSort[j]
+                BubSort[j] = BubSort[j + 1]
+                BubSort[j + 1] = Store
             }
         }
-      
+    }   
+   
     
     
 	return array;
 }
 
 module.exports = bubbleSort;
-
-// let bubbleSort = (inputArr) => {
-//     let len = inputArr.length;
-//     for (let i = 0; i < len; i++) {
-//         for (let j = 0; j < len; j++) {
-//             if (inputArr[j] > inputArr[j + 1]) {
-//                 let tmp = inputArr[j];
-//                 inputArr[j] = inputArr[j + 1];
-//                 inputArr[j + 1] = tmp;
-//             }
-//         }
-//     }
-//     return inputArr;
-// };
-// DO NOT COPY THIS,working example tho
